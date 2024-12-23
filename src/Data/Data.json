@@ -1,0 +1,86 @@
+{
+    "repositories": [
+      {
+        "name": "design-system",
+        "lang": "React",
+        "size": "7320 KB",
+        "updated": "1 day ago",
+        "type": "Public"
+      },
+      {
+        "name": "codeant-ci-app", 
+        "lang": "Javascript",
+        "size": "5871 KB",
+        "updated": "2 days ago",
+        "type": "Private"
+      },
+      {
+        "name": "analytics-dashboard",
+        "lang": "Python", 
+        "size": "4521 KB",
+        "updated": "5 days ago",
+        "type": "Private"
+      },
+      {
+        "name": "mobile-app",
+        "lang": "Swift",
+        "size": "3096 KB",
+        "updated": "3 days ago",
+        "type": "Public"
+      },
+      {
+        "name": "e-commerce-platform",
+        "lang": "Java",
+        "size": "6210 KB",
+        "updated": "6 days ago",
+        "type": "Private"
+      },
+      {
+        "name": "blog-website",
+        "lang": "HTML/CSS",
+        "size": "1876 KB",
+        "updated": "4 days ago",
+        "type": "Public"
+      },
+      {
+        "name": "social-network",
+        "lang": "PHP",
+        "size": "5432 KB",
+        "updated": "7 days ago",
+        "type": "Private"
+      },
+      {
+        "name": "chat-application",
+        "lang": "JavaScript",
+        "size": "2987 KB",
+        "updated": "1 week ago",
+        "type": "Public"
+      },{
+        "name": "e-learning-platform",
+        "lang": "Python",
+        "size": "4123 KB",
+        "updated": "2 weeks ago",
+        "type": "Public"
+
+      },{
+        "name": "music-player",
+        "lang": "C++",
+        "size": "2876 KB",
+        "updated": "3 weeks ago",
+        "type": "Public"
+      },{
+        "name": "task-management",
+        "lang": "Java",
+        "size": "5210 KB",
+        "updated": "4 weeks ago",
+        "type": "Private"
+
+      },{
+        "name": "weather-app",
+        "lang": "JavaScript",
+        "size": "1987 KB",
+        "updated": "5 weeks ago",
+        "type": "Public"
+      }
+    ]
+  }
