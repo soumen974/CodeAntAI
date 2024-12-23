@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import mainlogo from "../assets/icons/mainlogo.svg";
 import LogoTobeusedInSignINLeft from "../assets/LogoTobeusedInSignINLeft.svg";
+import piechart from "../assets/icons/piechart.svg";
 const Signin = () => {
   const [selectedOption, setSelectedOption] = useState('SAAS');
 
@@ -40,11 +41,10 @@ const Signin = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-6 w-48 relative left-12">
+          <div className="bg-white rounded-2xl shadow-xl p-6 w-48 relative left-12">
             <div className="flex items-start justify-between mb-1">
-              <div>
-                <div className="text-xs text-gray-500 mb-1">Issues Fixed</div>
-                <div className="text-2xl font-bold">500K+</div>
+              <div className="">
+                <img src={piechart}  alt="piechart" />
               </div>
               <div className="flex items-center text-blue-500">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -53,6 +53,10 @@ const Signin = () => {
                 <div className="text-xs ml-1">14%</div>
               </div>
             </div>
+            <div>
+                <div className="text-xs text-gray-500 mb-1">Issues Fixed</div>
+                <div className="text-2xl font-bold">500K+</div>
+              </div>
             <div className="text-xs text-gray-500">This week</div>
           </div>
         </div>
@@ -116,7 +120,7 @@ const Signin = () => {
 
           <div className="mt-8 text-center text-sm text-gray-600">
             By signing up you agree to the{' '}
-            <a href="#" className="text-blue-500 hover:underline">
+            <a href="/" className="text-blue-500 hover:underline">
               Privacy Policy
             </a>
           </div>
