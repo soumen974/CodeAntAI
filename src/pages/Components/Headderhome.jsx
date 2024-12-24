@@ -53,6 +53,12 @@ const Headerhome = () => {
       },
     ];
 
+    const logout = () => {
+      localStorage.clear();
+      sessionStorage.clear();
+      window.location.reload();
+    } 
+
   return (
     <div className="">
       {/* movbil View */}
@@ -80,10 +86,10 @@ const Headerhome = () => {
               <option defaultValue >Soumen Bhunia</option>
               <option value="Another Account" >Another Account</option>
           </select>
-            {Menus.map((menu, i) => (
+            {Menus.map((menu, _) => (
               <NavLink
                 to={menu.link}
-                onClick={()=>setIsNavbarOpen(!isNavbarOpen)}
+                onClick={()=>{menu.link==="/logout" ? logout() : setIsNavbarOpen(!isNavbarOpen);}}
                 className={({ isActive }) =>
                   `flex items-center text-sm gap-3.5 font-medium p-2 rounded
                   ${isActive ? "bg-blue-600 text-white" : "hover:bg-gray-100"}`
@@ -93,7 +99,7 @@ const Headerhome = () => {
                 {menu.icon}
                 <h2>{menu.name}</h2>
               </NavLink>
-            ))}
+            ))}          
           </nav>
          </div>
         </div>

@@ -40,6 +40,12 @@ export default function Sidebar() {
     }
   ];
 
+  const logout = () => {
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.reload();
+  } 
+  
   return (
     <div className='bg-green-20 '>
        <aside className="w-[14rem] h-[90vh] bg-white border-r border-gray-200">
@@ -85,18 +91,14 @@ export default function Sidebar() {
               <h2>Support </h2>
             </NavLink>
 
-          <NavLink
-              to={'/logout'}
-              className={({ isActive }) =>
-                `flex items-center text-sm gap-3.5 font-medium p-3 rounded ${
-                  "" ? "" : ""
-                } ${isActive ? "bg-blue-600 text-white" : "hover:bg-gray-100 text-[#414651]"}`
+          <div
+              onClick={()=>logout()}
+              className={`flex items-center cursor-pointer text-sm gap-3.5 font-medium p-3 rounded  hover:bg-gray-100 text-[#414651]`
               }
-              
             >
-              <Logout />
-              <h2>Logout </h2>
-            </NavLink>
+            <Logout />
+            <h2>Logout </h2>
+          </div>
         </div>
       </aside>
     </div>
