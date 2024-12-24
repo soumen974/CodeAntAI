@@ -20,15 +20,20 @@ const Signin = () => {
 
   const authLoginMethods = (methods) =>{
     if(methods === 'github'){
-      window.location.href = `https://www.google.com/search?q=github.com`;
+      // window.location.href = `https://www.google.com/search?q=github.com`;
+      localStorage.setItem("User", 'true');
     }else if(methods === 'bitbucket'){
-      window.location.href = `https://www.google.com/search?q=bitbucket.com`;
+      // window.location.href = `https://www.google.com/search?q=bitbucket.com`;
+      localStorage.setItem("User", 'true');
     }else if(methods === 'Azure'){
-      window.location.href = `https://www.google.com/search?q=azure.com`;
+      // window.location.href = `https://www.google.com/search?q=azure.com`;
+      localStorage.setItem("User", 'true');
     }else if(methods === 'gitlab'){
-      window.location.href = `https://www.google.com/search?q=gitlab.com`;
+      // window.location.href = `https://www.google.com/search?q=gitlab.com`;
+      localStorage.setItem("User", 'true');
     }else if(methods === 'sso'){
-      window.location.href = `https://www.google.com/search?q=sso`;
+      // window.location.href = `https://www.google.com/search?q=sso`;
+      localStorage.setItem("User", 'true');
     }else{
       window.location.href = `/`;
     }
