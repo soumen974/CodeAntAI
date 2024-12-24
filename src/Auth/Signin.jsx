@@ -11,7 +11,12 @@ import sso from "../assets/icons/sso.svg";
 const Signin = () => {
   const [selectedOption, setSelectedOption] = useState('SAAS');
 
-
+ const AuthButtons =[
+    {name:'Github',method:'github',icon:github,text:'Sign in with Github'},
+    {name:'Bitbucket',method:'bitbucket',icon:bitbucket,text:'Sign in with Bitbucket'},
+    {name:'Azure',method:'azure',icon:azure,text:'Sign in with Azure Devops'},
+    {name:'Gitlab',method:'gitlab',icon:gitlab,text:'Sign in with GitLab'}
+  ]
 
   const authLoginMethods = (methods) =>{
     if(methods === 'github'){
@@ -31,7 +36,7 @@ const Signin = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white flex">
+    <div className="min-h-screen  bg-white flex">
       
       <div className="w-1/2 border-r border relative hidden lg:block">
         {/* Background Logo */}
@@ -89,8 +94,8 @@ const Signin = () => {
       </div>
 
       <div className="w-full bg-[#FAFAFA] lg:w-1/2 flex items-center justify-center p-4 md:p-12">
-        <div className="w-full max-w-xl">
-          <div className="bg-white h-[67vh]  rounded-xl border border-gray-200 ">
+        <div className="w-full max-w-xl ">
+          <div className="bg-white min-h-[75vh]  rounded-xl border border-gray-200 ">
               
               <div className="md:p-6 py-6 px-4 border-b border-gray-200">
                 <div className="text-center mb-8">
@@ -131,22 +136,12 @@ const Signin = () => {
 
               <div className="w-full md:max-w-md sm:max-w-sm sm:mx-auto max-md:px-3 py-8">
                 <div className={` space-y-3 ${selectedOption === 'SAAS'? 'block': 'hidden'}`}>
-                  <button onClick={()=>authLoginMethods('github')}  className="w-full font-semibold flex items-center justify-center gap-3 py-3 px-4 bg-white border rounded-lg hover:bg-gray-50 transition-colors">
-                    <img src={github} alt="GitHub" className="w-5 h-5" />
-                    Sign in with Github
-                  </button>
-                  <button onClick={()=>authLoginMethods('bitbucket')} className="w-full font-semibold flex items-center justify-center gap-3 py-3 px-4 bg-white border rounded-lg hover:bg-gray-50 transition-colors">
-                    <img src={bitbucket} alt="Bitbucket" className="w-5 h-5" />
-                    Sign in with Bitbucket
-                  </button>
-                  <button onClick={()=>authLoginMethods('azure')} className="w-full font-semibold flex items-center justify-center gap-3 py-3 px-4 bg-white border rounded-lg hover:bg-gray-50 transition-colors">
-                    <img src={azure} alt="Azure DevOps" className="w-5 h-5" />
-                    Sign in with Azure Devops
-                  </button>
-                  <button onClick={()=>authLoginMethods('gitlab')} className="w-full font-semibold flex items-center justify-center gap-3 py-3 px-4 bg-white border rounded-lg hover:bg-gray-50 transition-colors">
-                    <img src={gitlab} alt="GitLab" className="w-5 h-5" />
-                    Sign in with GitLab
-                  </button>
+                  {AuthButtons.map((button) => (
+                      <button key={button.name}  onClick={()=>authLoginMethods(button.method)} className="w-full font-semibold flex items-center justify-center gap-3 py-3 px-4 bg-white border rounded-lg hover:bg-gray-50 transition-colors">
+                      <img src={button.icon} alt={button.icon} className="w-5 h-5" />
+                      {button.text}
+                    </button>
+                    ))}
                 </div>
                 
                 <div className={` space-y-3 ${selectedOption === 'Self Hosted'? 'block': 'hidden'}`}>
